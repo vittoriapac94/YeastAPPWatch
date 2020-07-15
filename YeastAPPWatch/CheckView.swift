@@ -14,6 +14,7 @@ struct CheckView: View {
     @State var showCaptureImageView: Bool = false
     @State var uiimage: UIImage? = nil
     @State var label: String = "......"
+    var a = ""
     
     @Environment(\.presentationMode) var presentationMode
     
