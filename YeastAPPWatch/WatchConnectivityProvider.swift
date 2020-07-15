@@ -1,4 +1,3 @@
-
 //
 //  WatchConnectivityProvider.swift
 //  WaterMyPlants
@@ -38,18 +37,21 @@ final class WatchConnectivityProvider: NSObject, WCSessionDelegate {
     
     // MARK: Sending Data to Watch
     
-    func sendTime(time : Any){
-        let message = ["tempo" : time]
-        session.sendMessage(message, replyHandler: {
-            (payload) in
-            print(payload)
-        }, errorHandler: {
-            (error) in
-            print(error)
-        })
-        print("messaggio inviato")
+    func notePlantsDidChange() {
+        guard session.activationState == .activated else {
+            print("session not active")
+            return
+        }
+        
+        do {
+            let context: [String: Any] = [:]
+            try session.updateApplicationContext(context)
+        }
+        catch let nsError as NSError {
+            print("failed updating application context", nsError)
+            
+        }
     }
-
     
     // MARK: Watch Session Delegate
     
@@ -63,7 +65,13 @@ final class WatchConnectivityProvider: NSObject, WCSessionDelegate {
         
     }
     
-
+    func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
+        print("message recieved")
+//        guard let contentString = message[WatchCommunication.requestKey] as? String , let _ = WatchCommunication.Content(rawValue: contentString) else {
+//            replyHandler([:])
+//            return
+//        }
+    }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         print("did finish activating session")
