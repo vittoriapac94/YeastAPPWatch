@@ -135,6 +135,7 @@ struct ContentView: View {
         }.gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
             .onAppear(perform: {
             self.provider.connect()
+                self.provider.sendTime(time: 23.00)
             
         })
  
