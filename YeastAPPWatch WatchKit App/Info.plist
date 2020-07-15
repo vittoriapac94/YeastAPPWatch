@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>parthenope.YeastAPPWatch</string>
+	<string>com.saba95.YeastAPPWatch</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

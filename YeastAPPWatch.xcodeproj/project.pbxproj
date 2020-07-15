@@ -27,6 +27,13 @@
 		B5635B0624B8705000B804A6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5635B0524B8705000B804A6 /* ComplicationController.swift */; };
 		B5635B0824B8705000B804A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5635B0724B8705000B804A6 /* Assets.xcassets */; };
 		B5635B0B24B8705000B804A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5635B0A24B8705000B804A6 /* Preview Assets.xcassets */; };
+		D91A03AD24BDBBF900D52141 /* LievitoMadreClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D91A03AC24BDBBF900D52141 /* LievitoMadreClassifier.mlmodel */; };
+		D91A03AF24BDBC6100D52141 /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A03AE24BDBC6100D52141 /* CaptureImageView.swift */; };
+		D91A03B124BDBC7B00D52141 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A03B024BDBC7B00D52141 /* Coordinator.swift */; };
+		D943490E24BD9F3C001CAACF /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943490D24BD9F3C001CAACF /* TimerView.swift */; };
+		D943491024BD9F56001CAACF /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943490F24BD9F56001CAACF /* CheckView.swift */; };
+		D943491224BDA256001CAACF /* WatchConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943491124BDA256001CAACF /* WatchConnectivityProvider.swift */; };
+		D943491524BDA5AF001CAACF /* PhoneConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943491324BDA5A3001CAACF /* PhoneConnectivityProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +122,13 @@
 		B5635B0A24B8705000B804A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5635B0C24B8705000B804A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5635B0D24B8705000B804A6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D91A03AC24BDBBF900D52141 /* LievitoMadreClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LievitoMadreClassifier.mlmodel; sourceTree = "<group>"; };
+		D91A03AE24BDBC6100D52141 /* CaptureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageView.swift; sourceTree = "<group>"; };
+		D91A03B024BDBC7B00D52141 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D943490D24BD9F3C001CAACF /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		D943490F24BD9F56001CAACF /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
+		D943491124BDA256001CAACF /* WatchConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityProvider.swift; sourceTree = "<group>"; };
+		D943491324BDA5A3001CAACF /* PhoneConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivityProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,11 +167,11 @@
 			isa = PBXGroup;
 			children = (
 				B5635ABF24B8704C00B804A6 /* YeastAPPWatch */,
-				B5635AD624B8704E00B804A6 /* YeastAPPWatchTests */,
-				B5635AE124B8704E00B804A6 /* YeastAPPWatchUITests */,
 				B5635AEB24B8704F00B804A6 /* YeastAPPWatch WatchKit App */,
 				B5635AFA24B8705000B804A6 /* YeastAPPWatch WatchKit Extension */,
 				B5635ABE24B8704C00B804A6 /* Products */,
+				B5635AE124B8704E00B804A6 /* YeastAPPWatchUITests */,
+				B5635AD624B8704E00B804A6 /* YeastAPPWatchTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +193,12 @@
 				B5635AC024B8704C00B804A6 /* AppDelegate.swift */,
 				B5635AC224B8704C00B804A6 /* SceneDelegate.swift */,
 				B5635AC424B8704C00B804A6 /* ContentView.swift */,
+				D943490D24BD9F3C001CAACF /* TimerView.swift */,
+				D943490F24BD9F56001CAACF /* CheckView.swift */,
+				D91A03AE24BDBC6100D52141 /* CaptureImageView.swift */,
+				D91A03B024BDBC7B00D52141 /* Coordinator.swift */,
+				D91A03AC24BDBBF900D52141 /* LievitoMadreClassifier.mlmodel */,
+				D943491124BDA256001CAACF /* WatchConnectivityProvider.swift */,
 				B5635AC624B8704E00B804A6 /* Assets.xcassets */,
 				B5635ACB24B8704E00B804A6 /* LaunchScreen.storyboard */,
 				B5635ACE24B8704E00B804A6 /* Info.plist */,
@@ -232,6 +252,7 @@
 				B5635B0124B8705000B804A6 /* NotificationController.swift */,
 				B5635B0324B8705000B804A6 /* NotificationView.swift */,
 				B5635B0524B8705000B804A6 /* ComplicationController.swift */,
+				D943491324BDA5A3001CAACF /* PhoneConnectivityProvider.swift */,
 				B5635B0724B8705000B804A6 /* Assets.xcassets */,
 				B5635B0C24B8705000B804A6 /* Info.plist */,
 				B5635B0D24B8705000B804A6 /* PushNotificationPayload.apns */,
@@ -348,7 +369,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
-				ORGANIZATIONNAME = "Lorenzo Magnano";
+				ORGANIZATIONNAME = "Sabatino Cardillo";
 				TargetAttributes = {
 					B5635ABC24B8704C00B804A6 = {
 						CreatedOnToolsVersion = 11.5;
@@ -442,8 +463,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5635AC124B8704C00B804A6 /* AppDelegate.swift in Sources */,
+				D91A03AD24BDBBF900D52141 /* LievitoMadreClassifier.mlmodel in Sources */,
 				B5635AC324B8704C00B804A6 /* SceneDelegate.swift in Sources */,
+				D91A03AF24BDBC6100D52141 /* CaptureImageView.swift in Sources */,
+				D943490E24BD9F3C001CAACF /* TimerView.swift in Sources */,
 				B5635AC524B8704C00B804A6 /* ContentView.swift in Sources */,
+				D943491024BD9F56001CAACF /* CheckView.swift in Sources */,
+				D943491224BDA256001CAACF /* WatchConnectivityProvider.swift in Sources */,
+				D91A03B124BDBC7B00D52141 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +499,7 @@
 				B5635B0224B8705000B804A6 /* NotificationController.swift in Sources */,
 				B5635B0024B8705000B804A6 /* ExtensionDelegate.swift in Sources */,
 				B5635B0424B8705000B804A6 /* NotificationView.swift in Sources */,
+				D943491524BDA5AF001CAACF /* PhoneConnectivityProvider.swift in Sources */,
 				B5635B0624B8705000B804A6 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +669,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"YeastAPPWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = A5SY6747HX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "YeastAPPWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -648,7 +677,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = parthenope.YeastAPPWatch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saba95.YeastAPPWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -664,6 +693,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"YeastAPPWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = A5SY6747HX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "YeastAPPWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -671,7 +701,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = parthenope.YeastAPPWatch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saba95.YeastAPPWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -687,9 +717,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5SY6747HX;
 				IBSC_MODULE = YeastAPPWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "YeastAPPWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = parthenope.YeastAPPWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saba95.YeastAPPWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -705,9 +736,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5SY6747HX;
 				IBSC_MODULE = YeastAPPWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "YeastAPPWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = parthenope.YeastAPPWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saba95.YeastAPPWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -723,13 +755,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"YeastAPPWatch/Preview Content\"";
+				DEVELOPMENT_TEAM = A5SY6747HX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = YeastAPPWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = parthenope.YeastAPPWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saba95.YeastAPPWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -742,13 +775,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"YeastAPPWatch/Preview Content\"";
+				DEVELOPMENT_TEAM = A5SY6747HX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = YeastAPPWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = parthenope.YeastAPPWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saba95.YeastAPPWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -760,7 +794,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5SY6747HX;
 				INFOPLIST_FILE = YeastAPPWatchTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -768,7 +804,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = parthenope.YeastAPPWatchTests;
+				PRODUCT_BUNDLE_IDENTIFIER = saba95.YeastAPPWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -781,7 +817,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5SY6747HX;
 				INFOPLIST_FILE = YeastAPPWatchTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -789,7 +827,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = parthenope.YeastAPPWatchTests;
+				PRODUCT_BUNDLE_IDENTIFIER = saba95.YeastAPPWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -801,14 +839,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5SY6747HX;
 				INFOPLIST_FILE = YeastAPPWatchUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = parthenope.YeastAPPWatchUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = saba95.YeastAPPWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -820,15 +860,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5SY6747HX;
 				INFOPLIST_FILE = YeastAPPWatchUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = parthenope.YeastAPPWatchUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = saba95.YeastAPPWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = YeastAPPWatch;
