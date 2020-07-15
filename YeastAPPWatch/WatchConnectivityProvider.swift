@@ -47,7 +47,7 @@ final class WatchConnectivityProvider: NSObject, WCSessionDelegate {
             (error) in
             print(error)
         })
-        
+        print("messaggio inviato")
     }
 
     
