@@ -14,8 +14,8 @@ struct CheckView: View {
     @State var showCaptureImageView: Bool = false
     @State var uiimage: UIImage? = nil
     @State var label: String = "......"
-    var a = ""
     
+//    prova
     @Environment(\.presentationMode) var presentationMode
     
     let model = LievitoMadreClassifier()
