@@ -67,6 +67,8 @@ final class WatchConnectivityProvider: NSObject, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
         print("message recieved")
+        
+        replyHandler(["Ciao" : 22])
 //        guard let contentString = message[WatchCommunication.requestKey] as? String , let _ = WatchCommunication.Content(rawValue: contentString) else {
 //            replyHandler([:])
 //            return

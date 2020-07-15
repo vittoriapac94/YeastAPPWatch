@@ -28,7 +28,7 @@ struct ContentView: View {
                         .frame(width: 143, height: 143)
             .onAppear(perform: {
                 self.provider.connect()
-                self.provider.readMessage()
+                self.provider.sendTime()
             })
 
     }
