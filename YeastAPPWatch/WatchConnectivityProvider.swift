@@ -78,6 +78,7 @@ final class WatchConnectivityProvider: NSObject, WCSessionDelegate {
         })
         print("messaggio inviato")
     }
+    
     func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
         
         print("message recieved", message)
