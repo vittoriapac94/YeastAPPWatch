@@ -47,6 +47,7 @@ final class PhoneConnectivityProvider: NSObject, WCSessionDelegate {
         }, errorHandler: { error in
             print("sending message failed")
         })
+        print("messaggio inviato")
     }
     
     // MARK: Watch Session Delegate
