@@ -116,7 +116,7 @@ struct TimerView: View {
                                         
                                         let content = UNMutableNotificationContent()
                                         content.title = "Notification from Yeast It"
-                                        content.body = "Finito!!"
+                                        content.body = "Finished"
                                         
                                         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                                         
@@ -208,12 +208,12 @@ struct TimerView: View {
                                 .frame(width: 300, height: 150)
                             VStack{
                                 
-                                Text("Effettua il tuo \(self.nRefresh) rinfresco")
+                                Text("Make your \(self.nRefresh) refresh")
                                     .font(.system(size: 18, weight: .bold))
                                     .foregroundColor(Color(red: 247 / 255, green: 124 / 255, blue: 66 / 255))
-                                Text("Aggiungi altri \((Int(localQuantity) ?? 0) / 2) gr di acqua")
+                                Text("Add other \((Int(localQuantity) ?? 0) / 2) gr of water")
                                     .font(.system(size: 15, weight: .light))
-                                Text("Aggiungi altri \(localQuantity) gr di farina")
+                                Text("Add other \(localQuantity) gr of flour")
                                     .font(.system(size: 15, weight: .light))
                                 
                                 Button(action : resetParameters){

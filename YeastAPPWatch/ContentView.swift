@@ -73,8 +73,8 @@ struct ContentView: View {
                     
                     VStack(alignment: .center){
                         VStack{
-                            Text("Scegli un nome per il tuo avatar")
-                            TextField("Nome Avatar...",text: $avatarName)
+                            Text("Choose a name for your avatar")
+                            TextField("Avatar name",text: $avatarName)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .font(.system(size: textDimension / 2, weight: .light))
                             .frame(width: avatarImageDimension / 2)
@@ -82,8 +82,8 @@ struct ContentView: View {
                         
                         
                         VStack{
-                            Text("Quantità di Lievito (gr)")
-                            TextField("Quantità...",text: $quantity)
+                            Text("Yeast quantity (gr)")
+                            TextField("Quantity",text: $quantity)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .frame(width: avatarImageDimension / 2)
                                 .font(.system(size: textDimension / 2, weight: .light))
@@ -100,12 +100,12 @@ struct ContentView: View {
                                 .frame( height: 100)
                                 .padding()
                             VStack(alignment: .center){
-                                Text("Ti servono")
+                                Text("You need")
                                     .font(.system(size: 23, weight: .bold))
                                     .foregroundColor(Color(red: 247 / 255, green: 124 / 255, blue: 66 / 255))
-                                Text("\(quantity) gr di farina")
+                                Text("\(quantity) gr of flour")
                                     .font(.system(size: 15, weight: .light))
-                                Text("\((Int(quantity) ?? 0) / 2) gr di acqua")
+                                Text("\((Int(quantity) ?? 0) / 2) gr of water")
                                     .font(.system(size: 15, weight: .light))
                             }
                         }
@@ -117,7 +117,7 @@ struct ContentView: View {
                                     .foregroundColor(Color(red: 237 / 255, green: 145 / 255, blue: 97 / 255))
                                     .cornerRadius(25)
                                    
-                                Text("INIZIA A LIEVITARE")
+                                Text("START LEAVENING")
                                     .foregroundColor(Color.white)
                                 .bold()
                                     
