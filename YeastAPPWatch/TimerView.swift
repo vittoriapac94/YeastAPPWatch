@@ -178,6 +178,7 @@ struct TimerView: View {
                                                 
                                         )
                                             .padding(.bottom, 30)
+                                            .opacity(isVisible ? 1 : 0)
                                         
                                     }
                                     
