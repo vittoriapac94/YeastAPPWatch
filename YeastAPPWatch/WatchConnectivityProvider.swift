@@ -56,17 +56,17 @@ final class WatchConnectivityProvider: NSObject, WCSessionDelegate {
     // MARK: Watch Session Delegate
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-        print("session inactive")
+        print("phone session inactive")
        
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
-        print("session deactivated")
+        print("phone session deactivated")
         
     }
     func sendTime(time : Any) {
         guard session.activationState == .activated else {
-            print("session is not active")
+            print("phone session is not active")
             
             return
         }
@@ -79,13 +79,8 @@ final class WatchConnectivityProvider: NSObject, WCSessionDelegate {
         print("messaggio inviato")
     }
     
-    func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
-        
-        print("message recieved", message)
 
-    }
-    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("did finish activating session")
+        print("did finish activating phone session")
     }
 }

@@ -26,10 +26,10 @@ final class PhoneConnectivityProvider: NSObject, WCSessionDelegate {
     
     func connect() {
         guard WCSession.isSupported() else {
-            print("phone session is not supported")
+            print("session is not supported")
             return
         }
-        print("activating phone session")
+        print("activating session")
         session.activate()
     }
     
@@ -38,13 +38,13 @@ final class PhoneConnectivityProvider: NSObject, WCSessionDelegate {
     // MARK: Watch Session Delegate
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("did finish activating phone session")
+        print("did finish activating session")
        
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
         
-        print("message recieved", message)
+        print("watch message recieved", message)
 
     }
 }
