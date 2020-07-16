@@ -56,4 +56,10 @@ final class PhoneConnectivityProvider: NSObject, WCSessionDelegate {
         print("did finish activating session")
        
     }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
+        
+        print("message recieved", message)
+
+    }
 }
