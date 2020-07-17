@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct TimerView: View {
-    let hourInSecond = 172800
+    @State var hourInSecond = 172800
     var localQuantity : String
     var localName : String
     var provider = WatchConnectivityProvider()
@@ -88,7 +88,7 @@ struct TimerView: View {
                                 self.imageName = String(temp)
                                 
                                 
-                                self.tempo -= 3600
+                                self.tempo -= 3600*4
                                 self.progressValuePercentage = ((self.tempo * 100) / Double(self.hourInSecond)) / 100
                                 
                                 self.hoursD = self.tempo / 3600.00
@@ -259,11 +259,30 @@ struct TimerView: View {
             })
         
     }
+    
     func resetParameters(){
-        self.isVisible = false
-        self.tempo = 172800.00/2
-        self.imageCounter = 0
         self.nRefresh += 1
+        self.isVisible = false
+        
+        switch self.nRefresh {
+        case 2...5:
+            self.tempo = 172800.00/2.00
+            self.imageCounter = 0
+            self.hourInSecond = 172800/2
+            break
+        case 6...34:
+            self.tempo = 172800.00/4.00
+            self.imageCounter = 0
+            self.hourInSecond = 172800/4
+            break
+        default: //dopo la fase di preparazione si rinfresca una volta a settimana
+            self.tempo = 604800.00
+            self.imageCounter = 0
+            self.hourInSecond = 604800
+            break
+        }
+        
+        
         
     }
 }
