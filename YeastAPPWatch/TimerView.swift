@@ -261,7 +261,7 @@ struct TimerView: View {
     }
     func resetParameters(){
         self.isVisible = false
-        self.tempo = 172800.00
+        self.tempo = 172800.00/2
         self.imageCounter = 0
         self.nRefresh += 1
         

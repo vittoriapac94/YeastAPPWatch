@@ -37,6 +37,8 @@
 			</array>
 		</dict>
 	</dict>
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
     <key>NSCameraUsageDescription</key>
     <string>This app wants to take pictures.</string>
     <key>NSMicrophoneUsageDescription</key>
