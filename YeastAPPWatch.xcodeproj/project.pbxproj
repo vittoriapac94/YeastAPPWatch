@@ -94,7 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B5635ABD24B8704C00B804A6 /* YeastAPPWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeastAPPWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5635ABD24B8704C00B804A6 /* YeastIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeastIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5635AC024B8704C00B804A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5635AC224B8704C00B804A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B5635AC424B8704C00B804A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		B5635ABE24B8704C00B804A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5635ABD24B8704C00B804A6 /* YeastAPPWatch.app */,
+				B5635ABD24B8704C00B804A6 /* YeastIT.app */,
 				B5635AD324B8704E00B804A6 /* YeastAPPWatchTests.xctest */,
 				B5635ADE24B8704E00B804A6 /* YeastAPPWatchUITests.xctest */,
 				B5635AE724B8704F00B804A6 /* YeastAPPWatch WatchKit App.app */,
@@ -291,7 +291,7 @@
 			);
 			name = YeastAPPWatch;
 			productName = YeastAPPWatch;
-			productReference = B5635ABD24B8704C00B804A6 /* YeastAPPWatch.app */;
+			productReference = B5635ABD24B8704C00B804A6 /* YeastIT.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B5635AD224B8704E00B804A6 /* YeastAPPWatchTests */ = {
@@ -767,7 +767,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.saba95.YeastAPPWatch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YeastIT;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -787,7 +787,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.saba95.YeastAPPWatch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YeastIT;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
