@@ -34,6 +34,7 @@
 		D943491024BD9F56001CAACF /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943490F24BD9F56001CAACF /* CheckView.swift */; };
 		D943491224BDA256001CAACF /* WatchConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943491124BDA256001CAACF /* WatchConnectivityProvider.swift */; };
 		D943491524BDA5AF001CAACF /* PhoneConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943491324BDA5A3001CAACF /* PhoneConnectivityProvider.swift */; };
+		D98F65A624C1A2540046D451 /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F65A524C1A2540046D451 /* Handler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		D943490F24BD9F56001CAACF /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
 		D943491124BDA256001CAACF /* WatchConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityProvider.swift; sourceTree = "<group>"; };
 		D943491324BDA5A3001CAACF /* PhoneConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivityProvider.swift; sourceTree = "<group>"; };
+		D98F65A524C1A2540046D451 /* Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 				B5635B0324B8705000B804A6 /* NotificationView.swift */,
 				B5635B0524B8705000B804A6 /* ComplicationController.swift */,
 				D943491324BDA5A3001CAACF /* PhoneConnectivityProvider.swift */,
+				D98F65A524C1A2540046D451 /* Handler.swift */,
 				B5635B0724B8705000B804A6 /* Assets.xcassets */,
 				B5635B0C24B8705000B804A6 /* Info.plist */,
 				B5635B0D24B8705000B804A6 /* PushNotificationPayload.apns */,
@@ -500,6 +503,7 @@
 				B5635B0024B8705000B804A6 /* ExtensionDelegate.swift in Sources */,
 				B5635B0424B8705000B804A6 /* NotificationView.swift in Sources */,
 				D943491524BDA5AF001CAACF /* PhoneConnectivityProvider.swift in Sources */,
+				D98F65A624C1A2540046D451 /* Handler.swift in Sources */,
 				B5635B0624B8705000B804A6 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

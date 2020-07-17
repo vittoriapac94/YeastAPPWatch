@@ -10,11 +10,14 @@ import Foundation
 import os
 import WatchConnectivity
 
+
 final class PhoneConnectivityProvider: NSObject, WCSessionDelegate {
     
     // MARK: Creating the Provider
     
     private let session: WCSession
+
+
     
     init(session: WCSession = .default) {
         self.session = session
@@ -43,8 +46,20 @@ final class PhoneConnectivityProvider: NSObject, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
-        
-        print("watch message recieved", message)
-
+        DispatchQueue.main.async {
+            let handler = Handler.sharedHandler
+            handler.tempoS = message["tempoS"] as! String
+            handler.tempoM = message["tempoM"] as! String
+            handler.tempoH = message["tempoH"] as! String
+            handler.nomeImmagine = message["image"] as! String
+            handler.percentuale = message["percentage"] as! String
+            
+            
+            print("watch message recieved", message)
+        }
+       
+       
     }
+
+   
 }

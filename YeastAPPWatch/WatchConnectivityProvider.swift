@@ -35,42 +35,29 @@ final class WatchConnectivityProvider: NSObject, WCSessionDelegate {
         session.activate()
     }
     
-    // MARK: Sending Data to Watch
-    
-    func notePlantsDidChange() {
-        guard session.activationState == .activated else {
-            print("session not active")
-            return
-        }
-        
-        do {
-            let context: [String: Any] = [:]
-            try session.updateApplicationContext(context)
-        }
-        catch let nsError as NSError {
-            print("failed updating application context", nsError)
-            
-        }
-    }
+
     
     // MARK: Watch Session Delegate
     
     func sessionDidBecomeInactive(_ session: WCSession) {
         print("phone session inactive")
+        connect()
        
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
         print("phone session deactivated")
+        connect()
         
     }
-    func sendTime(time : Any) {
+    
+    func sendTime(image : String, timeS : Any, timeM : Any, timeH: Any, percentage : Any) {
         guard session.activationState == .activated else {
             print("phone session is not active")
             
             return
         }
-        let message = ["tempo" : time]
+        let message = ["tempoS" : timeS, "tempoM" : timeM, "tempoH" : timeH, "image" : image, "percentage" : percentage]
         session.sendMessage(message, replyHandler: { (payload) in
            print(payload)
         }, errorHandler: { error in

@@ -12,6 +12,7 @@ struct TimerView: View {
     let hourInSecond = 172800
     var localQuantity : String
     var localName : String
+    var provider = WatchConnectivityProvider()
     @State var imageName : String
     @State var progressValuePercentage: Double = 0.00
     @State var tempo = 172800.00
@@ -85,6 +86,8 @@ struct TimerView: View {
                                 var temp = self.imageName.dropLast()
                                 temp = temp + String(self.imageCounter)
                                 self.imageName = String(temp)
+                                
+                                
                                 self.tempo -= 3600
                                 self.progressValuePercentage = ((self.tempo * 100) / Double(self.hourInSecond)) / 100
                                 
@@ -93,6 +96,8 @@ struct TimerView: View {
                                 self.min = self.hoursD - Double(self.hoursI)
                                 
                                 self.minI = Int(self.min * 60)
+                                
+                                self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage))
                                 print(self.tempo)
                                 
                                 
@@ -100,12 +105,14 @@ struct TimerView: View {
                                 
                                 //notifica watch
                                 if (self.imageCounter == 2){
-                                   self.imageCounter += 1
+                                    self.imageCounter += 1
                                 }
                                 
                                 var temp = self.imageName.dropLast()
                                 temp = temp + String(self.imageCounter)
                                 self.imageName = String(temp)
+                                
+                                self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage))
                                 
                                 self.isVisible = true
                                 
@@ -188,7 +195,7 @@ struct TimerView: View {
                     )
                     
                 }
-  
+                
             }
             .frame(width: 13.0)
             
@@ -247,6 +254,9 @@ struct TimerView: View {
             
         }.navigationBarTitle("")
             .navigationBarHidden(true)
+            .onAppear(perform: {
+                self.provider.connect()
+            })
         
     }
     func resetParameters(){

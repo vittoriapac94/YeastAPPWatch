@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    var provider = WatchConnectivityProvider()
     let textDimension : CGFloat = 40
     let imageDimension : CGFloat = 228
     let avatarImageDimension : CGFloat = 499
@@ -123,8 +122,8 @@ struct ContentView: View {
                                     
                             }
                             }.disabled(self.avatarName == ""
-                                && Int(self.quantity) == 0
-                                && self.quantity == "")
+                                || Int(self.quantity) == 0
+                                || self.quantity == "")
                             .navigationBarTitle("")
                             .navigationBarHidden(true)
                     }
@@ -133,10 +132,7 @@ struct ContentView: View {
             }
         
         }.gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
-            .onAppear(perform: {
-            self.provider.connect()
-            self.provider.sendTime(time: 23.00)
-        })
+
  
         
         
