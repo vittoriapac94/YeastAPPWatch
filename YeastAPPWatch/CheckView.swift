@@ -15,7 +15,7 @@ struct CheckView: View {
     @State var uiimage: UIImage? = nil
     @State var label: String = "......"
     
-//    prova
+    //    prova
     @Environment(\.presentationMode) var presentationMode
     
     let model = LievitoMadreClassifier()
@@ -82,11 +82,19 @@ struct CheckView: View {
                                         .overlay(Circle().stroke(Color.white, lineWidth: 4))
                                         .shadow(radius: 12)
                                     Button(action: { self.classify() }) {
-                                        Text("Guess what?")
-                                            .padding()
-                                            .background(Color.blue)
-                                            .foregroundColor(.white)
-                                            .font(.title)
+                                        ZStack{
+                                            Rectangle()
+                                                .frame(width: 150, height: 40, alignment: .center)
+                                                .foregroundColor(Color.white)
+                                                .cornerRadius(25)
+                                                .shadow(color: Color(red: 0.2,green: 0.2, blue: 0.2), radius: 8, x: 3, y: 5)
+                                            
+                                            
+                                            Text("CHECK")
+                                                .font(.system(size: 20, weight : .bold))
+                                                .foregroundColor(Color(red: 252 / 255, green: 139 / 255, blue: 86 / 255))
+                                            
+                                        }
                                     }
                                     Spacer()
                                         .frame(height: 75)

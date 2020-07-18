@@ -88,7 +88,7 @@ struct TimerView: View {
                                 self.imageName = String(temp)
                                 
                                 
-                                self.tempo -= 3600*4
+                                self.tempo -= 3600 * 2
                                 self.progressValuePercentage = ((self.tempo * 100) / Double(self.hourInSecond)) / 100
                                 
                                 self.hoursD = self.tempo / 3600.00
@@ -97,7 +97,7 @@ struct TimerView: View {
                                 
                                 self.minI = Int(self.min * 60)
                                 
-                                self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage))
+                                self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "false")
                                 print(self.tempo)
                                 
                                 
@@ -106,13 +106,14 @@ struct TimerView: View {
                                 //notifica watch
                                 if (self.imageCounter == 2){
                                     self.imageCounter += 1
+                                    var temp = self.imageName.dropLast()
+                                    temp = temp + String(self.imageCounter)
+                                    self.imageName = String(temp)
+                                    self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "true")
+                                                               self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "false")
+                                    
                                 }
                                 
-                                var temp = self.imageName.dropLast()
-                                temp = temp + String(self.imageCounter)
-                                self.imageName = String(temp)
-                                
-                                self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage))
                                 
                                 self.isVisible = true
                                 

@@ -51,13 +51,13 @@ final class WatchConnectivityProvider: NSObject, WCSessionDelegate {
         
     }
     
-    func sendTime(image : String, timeS : Any, timeM : Any, timeH: Any, percentage : Any) {
+    func sendTime(image : String, timeS : Any, timeM : Any, timeH: Any, percentage : Any, flag : Any) {
         guard session.activationState == .activated else {
             print("phone session is not active")
             
             return
         }
-        let message = ["tempoS" : timeS, "tempoM" : timeM, "tempoH" : timeH, "image" : image, "percentage" : percentage]
+        let message = ["tempoS" : timeS, "tempoM" : timeM, "tempoH" : timeH, "image" : image, "percentage" : percentage, "flag" : flag]
         session.sendMessage(message, replyHandler: { (payload) in
            print(payload)
         }, errorHandler: { error in

@@ -16,7 +16,7 @@ class Handler : ObservableObject{
     @Published var tempoH : String = "0"
     @Published var percentuale : String = ""
     @Published var nomeImmagine : String = "femaleAvatar0"
-
+    @Published var flag : String = "false"
     private init(){}
-    
+
 }
