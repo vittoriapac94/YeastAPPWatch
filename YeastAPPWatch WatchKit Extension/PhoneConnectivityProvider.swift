@@ -54,6 +54,7 @@ final class PhoneConnectivityProvider: NSObject, WCSessionDelegate {
             handler.nomeImmagine = message["image"] as! String
             handler.percentuale = message["percentage"] as! String
             handler.flag = message["flag"] as! String
+            print(handler.tempoS, handler.flag)
             
         }
        

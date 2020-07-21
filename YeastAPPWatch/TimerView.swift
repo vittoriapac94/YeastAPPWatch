@@ -15,7 +15,7 @@ struct TimerView: View {
     var provider = WatchConnectivityProvider()
     @State var imageName : String
     @State var progressValuePercentage: Double = 0.00
-    @State var tempo = 172800.00
+    @State var tempo = 172800.00 - 172790
     @State var hoursD = 0.00
     @State var hoursI = 0
     @State var min = 0.00
@@ -24,7 +24,7 @@ struct TimerView: View {
     @State var alert = false
     @State var isVisible = false
     @State var nRefresh = 1
-    @State var imageCounter = 0
+    @State var imageCounter = 2
     let imageDimension : CGFloat = 228
     let avatarImageDimension : CGFloat = 500
     
@@ -96,20 +96,20 @@ struct TimerView: View {
                                 
                                 self.minI = Int(self.min * 60)
                                 
-                                self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "false")
+                                self.provider.sendTime(image: self.imageName, timeS: String(Int(self.tempo) % 60), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "false")
                                 print(self.tempo)
                                 
                                 
                             }else{
-                                
+                                print("finito")
                                 //notifica watch
                                 if (self.imageCounter == 2){
                                     self.imageCounter += 1
                                     var temp = self.imageName.dropLast()
                                     temp = temp + String(self.imageCounter)
                                     self.imageName = String(temp)
-                                    self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "true")
-                                    self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "false")
+                                    self.provider.sendTime(image: self.imageName, timeS: String(Int(self.tempo) % 60), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "true")
+                                    self.provider.sendTime(image: self.imageName, timeS: String(Int(self.tempo) % 60), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "false")
                                     
                                 }
                                 

@@ -57,7 +57,7 @@ struct ProgressBar: View {
                     .font(.system(size: 14, weight: .light))
                 Text(":")
 
-                Text("\(Int(localHandler.tempoS) ?? 0 % 60) s")
+                Text("\(localHandler.tempoS) s")
                     .font(.system(size: 14, weight: .light))
                     
 
