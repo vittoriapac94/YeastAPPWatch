@@ -87,7 +87,7 @@ struct TimerView: View {
                                 temp = temp + String(self.imageCounter)
                                 self.imageName = String(temp)
                                 
-                                self.tempo -= 3600
+                                self.tempo -= 1
                                 self.progressValuePercentage = ((self.tempo * 100) / Double(self.hourInSecond)) / 100
                                 
                                 self.hoursD = self.tempo / 3600.00
