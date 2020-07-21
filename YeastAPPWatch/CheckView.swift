@@ -69,9 +69,6 @@ struct CheckView: View {
                                                 .foregroundColor(Color(red: 252 / 255, green: 139 / 255, blue: 86 / 255))
                                                 .bold()
                                                 .font(.title)
-                                            
-                                            
-                                            
                                         }
                                     }
                                     Spacer()
@@ -88,12 +85,9 @@ struct CheckView: View {
                                                 .foregroundColor(Color.white)
                                                 .cornerRadius(25)
                                                 .shadow(color: Color(red: 0.2,green: 0.2, blue: 0.2), radius: 8, x: 3, y: 5)
-                                            
-                                            
                                             Text("CHECK")
                                                 .font(.system(size: 20, weight : .bold))
                                                 .foregroundColor(Color(red: 252 / 255, green: 139 / 255, blue: 86 / 255))
-                                            
                                         }
                                     }
                                     Spacer()
@@ -108,20 +102,12 @@ struct CheckView: View {
                                                 .foregroundColor(Color(red: 247 / 255, green: 124 / 255, blue: 66 / 255))
                                             Text("\(label)")
                                                 .padding()
-                                                
                                                 .font(.system(size : 34, weight : .light))
-                                                
                                                 .frame(alignment: .leading)
                                         }
-                                        
                                     }
-                                    
                                 }
-                                
                         )
-                        
-                        
-                        
                 }
                 
                 //toggle view Image Picker in the ZStack

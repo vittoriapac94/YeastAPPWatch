@@ -87,8 +87,7 @@ struct TimerView: View {
                                 temp = temp + String(self.imageCounter)
                                 self.imageName = String(temp)
                                 
-                                
-                                self.tempo -= 3600 * 2
+                                self.tempo -= 3600
                                 self.progressValuePercentage = ((self.tempo * 100) / Double(self.hourInSecond)) / 100
                                 
                                 self.hoursD = self.tempo / 3600.00
@@ -110,7 +109,7 @@ struct TimerView: View {
                                     temp = temp + String(self.imageCounter)
                                     self.imageName = String(temp)
                                     self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "true")
-                                                               self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "false")
+                                    self.provider.sendTime(image: self.imageName, timeS: String(self.tempo), timeM: String(self.minI), timeH: String(self.hoursI), percentage: String(self.progressValuePercentage), flag: "false")
                                     
                                 }
                                 
@@ -309,15 +308,12 @@ struct ProgressBar: View {
                     .stroke(lineWidth: 15.0)
                     .opacity(0.3)
                     .foregroundColor(Color.red)
-                
                 Circle()
                     .trim(from: 0.0, to: CGFloat(min(self.progress, 1.0)))
                     .stroke(style: StrokeStyle(lineWidth: 15.0, lineCap: .round, lineJoin: .round))
                     .foregroundColor(Color.red)
                     .rotationEffect(Angle(degrees: 270.0))
                     .animation(.linear)
-                
-                
                 Image("hourglass")
                     .resizable()
                     .frame(width:53, height: 77)
@@ -330,15 +326,12 @@ struct ProgressBar: View {
                         else{
                             self.angle = 0
                         }
-                        
-                        
                 }
                 
             }
             Spacer()
                 .frame(height: 13.0)
             HStack{
-                
                 Text("\(hours) H")
                     .font(.system(size: 15, weight: .bold))
                 Text(":")
